@@ -130,7 +130,7 @@ Add:
 ```bash
 list dhcp_option '6,<dns 1>,<dns 2>'
 ```
-
+warning: check your spelling, as wrong spelling might cause the device to brick upon a reboot. You're supposed to remove the inequality simbols <>
 ### Redirecting all queries through the gateway to a specific DNS server
 
 1. Using `vi` or a program like WinSCP edit /etc/config/dhcp
@@ -139,12 +139,17 @@ list dhcp_option '6,<dns 1>,<dns 2>'
 ```bash
 config dnsmasq 'main'
 ```
+or 
+```bash
+config dnsmasq 'dnsmasq'
+```
 
 Add:
 
 ```bash
 list server '<IP of DNS>'
 ```
+warning: check your spelling, as wrong spelling might cause the device to brick upon a reboot. You're supposed to remove the inequality simbols <>
 
 ## VoIP Tweaks for Testra firmwares
 
